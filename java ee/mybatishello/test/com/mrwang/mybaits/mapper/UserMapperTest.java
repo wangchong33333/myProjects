@@ -3,6 +3,7 @@ package com.mrwang.mybaits.mapper;
 import static org.junit.Assert.*;
 
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -12,6 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.mrwang.mybaits.po.User;
+import com.mrwang.mybaits.po.UserQueryVO;
 
 public class UserMapperTest {
 	private SqlSessionFactory sqlSessionFactory;
@@ -45,6 +47,21 @@ public class UserMapperTest {
 		mapper.insertUser(user);
 		System.out.println(user.getId());
 		sqlSession.commit();
+		sqlSession.close();
+	}
+	
+	@Test
+	public void testFindUserList() throws Exception {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+		UserQueryVO vo=new UserQueryVO();
+		User user=new User();
+		user.setUsername("ะกร๗");
+		user.setSex("1");
+		vo.setUser(user);
+		List<User> users = mapper.findUserList(vo);
+		
+		System.out.println(users);
 		sqlSession.close();
 	}
 
