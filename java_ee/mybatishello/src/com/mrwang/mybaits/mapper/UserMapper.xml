@@ -17,19 +17,47 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		(#{username},#{birthday},#{sex},#{address})
 	</insert>
 
+	<sql id="whereClause">
+		<if test="user!=null">
+			<if test="user.username!=null and user.username!=''">
+				AND username LIKE '%${user.username}%'
+			</if>
+
+			<if test="user.sex!=null and user.sex!=''">
+				AND sex = #{user.sex}
+			</if>
+		</if>
+
+		<if test="idList != null">
+			<foreach collection="idList" item="id" open="AND id IN ("
+				close=")" separator=",">
+				#{id}
+			</foreach>
+		</if>
+	</sql>
+
 	<select id="findUserList" parameterType="UserQueryVO"
 		resultType="user">
-		SELECT * FROM user WHERE
-		username LIKE '%${user.username}%'
-		AND sex = #{user.sex}
+		SELECT * FROM user
+		<where>
+			<include refid="whereClause"></include>
+		</where>
 	</select>
 
 	<select id="findUserCount" parameterType="UserQueryVO"
 		resultType="int">
-		SELECT count(*) FROM user WHERE
-		username LIKE
-		'%${user.username}%'
-		AND sex = #{user.sex}
+		SELECT count(*) FROM user
+		<where>
+			<if test="user!=null">
+				<if test="user.username!=null and user.username!=''">
+					AND username LIKE '%${user.username}%'
+				</if>
+
+				<if test="user.sex!=null and user.sex!=''">
+					AND sex = #{user.sex}
+				</if>
+			</if>
+		</where>
 	</select>
 
 	<resultMap type="user" id="UserRstMap">
@@ -38,10 +66,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="sex_" property="sex" />
 	</resultMap>
 
-	<select id="findUserRstMap" parameterType="int"
-		resultMap="UserRstMap">
+	<select id="findUserRstMap" parameterType="int" resultMap="UserRstMap">
 		SELECT id id_,username username_,sex sex_ FROM user WHERE id
 		=#{id}
+	</select>
+
+	<select id="">
+		SELECT * FROM user WHERE id IN (1,2,10);
 	</select>
 
 </mapper>

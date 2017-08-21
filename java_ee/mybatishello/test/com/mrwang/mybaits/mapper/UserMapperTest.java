@@ -3,6 +3,7 @@ package com.mrwang.mybaits.mapper;
 import static org.junit.Assert.*;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -55,10 +56,17 @@ public class UserMapperTest {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 		UserQueryVO vo = new UserQueryVO();
-		User user = new User();
-		user.setUsername("小明");
-		user.setSex("1");
-		vo.setUser(user);
+		// User user = new User();
+		// user.setUsername("小明");
+		// user.setSex("1");
+		// vo.setUser(user);
+
+		List<Integer> idList = new ArrayList<>();
+		idList.add(1);
+		idList.add(10);
+		idList.add(16);
+		vo.setIdList(idList);
+
 		List<User> users = mapper.findUserList(vo);
 
 		System.out.println(users);
@@ -79,7 +87,7 @@ public class UserMapperTest {
 		System.out.println(count);
 		sqlSession.close();
 	}
-	
+
 	@Test
 	public void testFindUserRstMap() throws Exception {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
