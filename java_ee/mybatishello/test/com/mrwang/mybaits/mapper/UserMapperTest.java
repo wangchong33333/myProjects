@@ -31,7 +31,7 @@ public class UserMapperTest {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 		User user = mapper.findUserById(1);
-		
+
 		System.out.println(user);
 		sqlSession.close();
 	}
@@ -40,8 +40,8 @@ public class UserMapperTest {
 	public void testInsertUser() throws Exception {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-		
-		User user=new User();
+
+		User user = new User();
 		user.setUsername("嘿嘿嘿");
 		user.setAddress("被禁");
 		mapper.insertUser(user);
@@ -49,19 +49,44 @@ public class UserMapperTest {
 		sqlSession.commit();
 		sqlSession.close();
 	}
-	
+
 	@Test
 	public void testFindUserList() throws Exception {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-		UserQueryVO vo=new UserQueryVO();
-		User user=new User();
+		UserQueryVO vo = new UserQueryVO();
+		User user = new User();
 		user.setUsername("小明");
 		user.setSex("1");
 		vo.setUser(user);
 		List<User> users = mapper.findUserList(vo);
-		
+
 		System.out.println(users);
+		sqlSession.close();
+	}
+
+	@Test
+	public void testFindUserCount() throws Exception {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+		UserQueryVO vo = new UserQueryVO();
+		User user = new User();
+		user.setUsername("小明");
+		user.setSex("1");
+		vo.setUser(user);
+		int count = mapper.findUserCount(vo);
+
+		System.out.println(count);
+		sqlSession.close();
+	}
+	
+	@Test
+	public void testFindUserRstMap() throws Exception {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+		User user = mapper.findUserRstMap(1);
+
+		System.out.println(user);
 		sqlSession.close();
 	}
 

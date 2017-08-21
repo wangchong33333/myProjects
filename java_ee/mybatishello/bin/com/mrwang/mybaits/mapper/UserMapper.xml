@@ -18,8 +18,30 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 
 	<select id="findUserList" parameterType="UserQueryVO"
-	resultType="user">
+		resultType="user">
 		SELECT * FROM user WHERE
-		username LIKE '%${user.username}%' AND sex = #{user.sex}
+		username LIKE '%${user.username}%'
+		AND sex = #{user.sex}
 	</select>
+
+	<select id="findUserCount" parameterType="UserQueryVO"
+		resultType="int">
+		SELECT count(*) FROM user WHERE
+		username LIKE
+		'%${user.username}%'
+		AND sex = #{user.sex}
+	</select>
+
+	<resultMap type="user" id="UserRstMap">
+		<id column="id_" property="id" />
+		<result column="username_" property="username" />
+		<result column="sex_" property="sex" />
+	</resultMap>
+
+	<select id="findUserRstMap" parameterType="int"
+		resultMap="UserRstMap">
+		SELECT id id_,username username_,sex sex_ FROM user WHERE id
+		=#{id}
+	</select>
+
 </mapper>

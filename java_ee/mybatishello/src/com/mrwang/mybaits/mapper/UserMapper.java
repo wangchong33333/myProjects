@@ -12,4 +12,8 @@ public interface UserMapper {
 
 	public List<User> findUserList(UserQueryVO vo);
 
+	public int findUserCount(UserQueryVO vo);
+
+	public User findUserRstMap(int id);
+
 }
