@@ -15,5 +15,4 @@ public interface UserMapper {
 	public int findUserCount(UserQueryVO vo);
 
 	public User findUserRstMap(int id);
-
 }
