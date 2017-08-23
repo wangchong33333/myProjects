@@ -9,5 +9,8 @@ import com.mrwang.mybaits.po.UserQueryVO;
 public interface OrdersMapper {
 
 	public List<OrdersExt> findOrdersAndUser();
+
 	public List<OrdersExt> findOrdersAndUserRstMap();
+
+	public List<OrdersExt> findOrdersAndDetailRstMap();
 }

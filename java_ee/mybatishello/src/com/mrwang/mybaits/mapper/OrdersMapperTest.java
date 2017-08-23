@@ -41,4 +41,12 @@ public class OrdersMapperTest {
 		List<OrdersExt> list = mapper.findOrdersAndUserRstMap();
 		sqlSession.close();
 	}
+	
+	@Test
+	public void testFindOrdersAndDetailRstMap() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		OrdersMapper mapper = sqlSession.getMapper(OrdersMapper.class);
+		List<OrdersExt> list = mapper.findOrdersAndDetailRstMap();
+		sqlSession.close();
+	}
 }

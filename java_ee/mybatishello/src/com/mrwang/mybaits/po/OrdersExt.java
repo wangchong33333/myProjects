@@ -1,10 +1,21 @@
 package com.mrwang.mybaits.po;
 
+import java.util.List;
+
 public class OrdersExt extends Orders {
 	private String username;
 	private String sex;
-	
+
 	private User user;
+	private List<Orderdetail> detailList;
+
+	public List<Orderdetail> getDetailList() {
+		return detailList;
+	}
+
+	public void setDetailList(List<Orderdetail> detailList) {
+		this.detailList = detailList;
+	}
 
 	public User getUser() {
 		return user;

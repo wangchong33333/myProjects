@@ -40,4 +40,31 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE orders.`user_id` = user.`id`
 	</select>
 
+	<resultMap type="OrdersExt" id="OrdersAndDetailRstMap"
+		extends="OrdersAndUserRstMap">
+		<collection property="detailList" ofType="OrderDetail">
+			<id column="detailId" property="id" />
+			<result column="items_id" property="itemsId" />
+			<result column="items_num" property="itemsNum" />
+		</collection>
+	</resultMap>
+
+	<select id="findOrdersAndDetailRstMap" resultMap="OrdersAndDetailRstMap">
+		SELECT
+		orders.`id`,
+		orders.`user_id`,
+		orders.`number`,
+		user.`username`,
+		user.`sex`,
+		orderdetail.`id` detailId,
+		orderdetail.`items_id`,
+		orderdetail.`items_num`
+		FROM
+		orders,
+		USER,
+		orderdetail
+		WHERE
+		orders.`user_id` = user.`id`
+		AND orders.`id` = orderdetail.`orders_id`
+	</select>
 </mapper>
