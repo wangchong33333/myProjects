@@ -13,4 +13,8 @@ public interface OrdersMapper {
 	public List<OrdersExt> findOrdersAndUserRstMap();
 
 	public List<OrdersExt> findOrdersAndDetailRstMap();
+	
+	public List<User> findUserAndItemsRstMap();
+	
+	public List<OrdersExt> findOrderAndUserLazyLoading();
 }

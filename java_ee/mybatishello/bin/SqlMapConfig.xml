@@ -7,9 +7,14 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		<property name="db.username" value="123" />
 	</properties>
 
+	<settings>
+		<setting name="lazyLoadingEnabled" value="true" />
+		<setting name="aggressiveLazyLoading" value="false" />
+	</settings>
+
 	<typeAliases>
-<!-- 		<typeAlias type="com.mrwang.mybaits.po.User" alias="user" /> -->
-		<package name="com.mrwang.mybaits.po"/>
+		<!-- <typeAlias type="com.mrwang.mybaits.po.User" alias="user" /> -->
+		<package name="com.mrwang.mybaits.po" />
 	</typeAliases>
 
 	<!-- 配置mybatis的环境信息 -->
@@ -29,9 +34,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 	<mappers>
 		<mapper resource="User.xml" />
-<!-- 		<mapper resource="mapper/UserMapper.xml" /> -->
-		
-		<package name="com.mrwang.mybaits.mapper"/>
+		<!-- <mapper resource="mapper/UserMapper.xml" /> -->
+
+		<package name="com.mrwang.mybaits.mapper" />
 	</mappers>
 
 </configuration>

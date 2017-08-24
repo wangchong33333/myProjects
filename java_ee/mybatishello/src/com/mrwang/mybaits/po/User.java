@@ -1,6 +1,7 @@
 package com.mrwang.mybaits.po;
 
 import java.util.Date;
+import java.util.List;
 
 public class User {
 	private int id;
@@ -8,6 +9,17 @@ public class User {
 	private String sex;// 性别
 	private Date birthday;// 生日
 	private String address;// 地址
+	
+	private List<Orders> orders;
+	
+	
+	
+	public List<Orders> getOrders() {
+		return orders;
+	}
+	public void setOrders(List<Orders> orders) {
+		this.orders = orders;
+	}
 	public int getId() {
 		return id;
 	}

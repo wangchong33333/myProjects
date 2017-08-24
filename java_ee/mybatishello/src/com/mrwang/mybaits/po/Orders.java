@@ -14,7 +14,18 @@ public class Orders {
 
     private String note;
     
-    //用户信息
+    private List<Orderdetail> detailList;
+    
+    
+    public List<Orderdetail> getDetailList() {
+		return detailList;
+	}
+
+	public void setDetailList(List<Orderdetail> detailList) {
+		this.detailList = detailList;
+	}
+
+	//用户信息
     private User user;
     
     //订单明细

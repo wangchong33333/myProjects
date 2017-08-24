@@ -43,8 +43,8 @@ public class UserMapperTest {
 		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 
 		User user = new User();
-		user.setUsername("ºÙºÙºÙ");
-		user.setAddress("±»½û");
+		user.setUsername("ï¿½ÙºÙºï¿½");
+		user.setAddress("ï¿½ï¿½ï¿½ï¿½");
 		mapper.insertUser(user);
 		System.out.println(user.getId());
 		sqlSession.commit();
@@ -57,7 +57,7 @@ public class UserMapperTest {
 		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 		UserQueryVO vo = new UserQueryVO();
 		// User user = new User();
-		// user.setUsername("Ð¡Ã÷");
+		// user.setUsername("Ð¡ï¿½ï¿½");
 		// user.setSex("1");
 		// vo.setUser(user);
 
@@ -79,7 +79,7 @@ public class UserMapperTest {
 		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 		UserQueryVO vo = new UserQueryVO();
 		User user = new User();
-		user.setUsername("Ð¡Ã÷");
+		user.setUsername("Ð¡ï¿½ï¿½");
 		user.setSex("1");
 		vo.setUser(user);
 		int count = mapper.findUserCount(vo);
@@ -95,6 +95,23 @@ public class UserMapperTest {
 		User user = mapper.findUserRstMap(1);
 
 		System.out.println(user);
+		sqlSession.close();
+	}
+
+	@Test
+	public void testOneLevelCache() throws Exception {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+		User user1 = mapper.findUserById(1);
+		System.out.println(user1);
+
+		mapper.insertUser(user1);
+		sqlSession.commit();
+
+		User user2 = mapper.findUserById(1);
+		System.out.println(user2);
+
 		sqlSession.close();
 	}
 
