@@ -3,6 +3,8 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mrwang.mybaits.mapper.UserMapper">
+	<cache type="org.mybatis.caches.ehcache.EhcacheCache" flushInterval="60000"></cache>
+
 	<select id="findUserById" parameterType="int" resultType="user">
 		SELECT
 		* FROM USER WHERE id=#{id}

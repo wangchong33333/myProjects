@@ -1,14 +1,15 @@
 package com.mrwang.mybaits.po;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-public class User {
+public class User implements Serializable{
 	private int id;
-	private String username;// ÓÃ»§ĞÕÃû
-	private String sex;// ĞÔ±ğ
-	private Date birthday;// ÉúÈÕ
-	private String address;// µØÖ·
+	private String username;// ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+	private String sex;// ï¿½Ô±ï¿½
+	private Date birthday;// ï¿½ï¿½ï¿½ï¿½
+	private String address;// ï¿½ï¿½Ö·
 	
 	private List<Orders> orders;
 	
