@@ -1,4 +1,4 @@
-package com.mrwang.ioc;
+package com.mrwang.d_scope;
 
 public interface UserService {
 	

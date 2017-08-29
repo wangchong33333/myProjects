@@ -1,4 +1,4 @@
-package com.mrwang.ioc;
+package com.mrwang.a_ioc;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
