@@ -2,16 +2,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mrwang.maven</groupId>
-	<artifactId>MavneSecond</artifactId>
+	<artifactId>MavenThird</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<build />
-
 	<dependencies>
 		<dependency>
 			<groupId>com.mrwang.maven</groupId>
-			<artifactId>MavenFirst</artifactId>
+			<artifactId>MavneSecond</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<!-- <exclusions>
+				<exclusion>
+					<groupId>com.mrwang.maven</groupId>
+					<artifactId>MavenFirst</artifactId>
+				</exclusion>
+			</exclusions> -->
 		</dependency>
-
 	</dependencies>
+
+
 </project>

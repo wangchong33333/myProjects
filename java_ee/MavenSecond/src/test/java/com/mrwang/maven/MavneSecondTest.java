@@ -1,14 +1,13 @@
 package com.mrwang.maven;
 
+
 import junit.framework.Assert;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class MavneSecondTest {
 
-	@Before
-	public void setUp() throws Exception {
+	protected void setUp() throws Exception {
 	}
 
 	@Test
