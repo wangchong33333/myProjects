@@ -9,8 +9,8 @@ public class MavenThirdTest {
 	@Test
 	public void test() {
 		MavenThird mavenThird = new MavenThird();
-		String sayHello1 = mavenThird.sayHello("mrwang");
-		Assert.assertEquals("hello mrwang", sayHello1);
+		String sayHello = mavenThird.sayHello("mrwang");
+		Assert.assertEquals("hello mrwang", sayHello);
 	}
 
 }
