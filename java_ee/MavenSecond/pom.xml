@@ -4,7 +4,6 @@
 	<groupId>com.mrwang.maven</groupId>
 	<artifactId>MavneSecond</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<build />
 
 	<dependencies>
 		<dependency>
@@ -14,4 +13,21 @@
 		</dependency>
 
 	</dependencies>
-</project>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+
+			</plugin>
+		</plugins>
+	</build>
+
+ 
+ </project>
