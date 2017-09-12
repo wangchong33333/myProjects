@@ -8,6 +8,7 @@
 
 	<properties>
 		<junit>4.9</junit>
+		<servlet-api>3.1.0</servlet-api>
 	</properties>
 
 	<dependencies>
@@ -15,6 +16,13 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet-api}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 

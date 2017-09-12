@@ -1,13 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.mrwang.maven</groupId>
 		<artifactId>MavenParent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.mrwang.maven1</groupId>
-	<artifactId>MavenSub</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>MavenWeb2</artifactId>
+	<packaging>pom</packaging>
 	<build />
+	<modules>
+		<module>MavenDao</module>
+		<module>MavenService</module>
+		<module>MavenController</module>
+	</modules>
 </project>
