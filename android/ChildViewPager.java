@@ -47,7 +47,7 @@ public class ChildViewPager extends ViewPager {
             case MotionEvent.ACTION_DOWN:
 
                 // Disallow parent ViewPager to intercept touch events.
-//                this.getParent().requestDisallowInterceptTouchEvent(true);
+                this.getParent().requestDisallowInterceptTouchEvent(true);
 
                 // save the current x position
                 this.lastX = ev.getX();
@@ -56,7 +56,7 @@ public class ChildViewPager extends ViewPager {
 
             case MotionEvent.ACTION_UP:
                 // Allow parent ViewPager to intercept touch events.
-//                this.getParent().requestDisallowInterceptTouchEvent(false);
+                this.getParent().requestDisallowInterceptTouchEvent(false);
 
                 // save the current x position
 //                this.lastX = ev.getX();
@@ -78,11 +78,9 @@ public class ChildViewPager extends ViewPager {
 //                            && !this.slidingRight
                             ) {
                         // make the parent touch interception active -> parent pager can swipe
-//                        this.getParent().requestDisallowInterceptTouchEvent(false);
+                        this.getParent().requestDisallowInterceptTouchEvent(false);
                         return false;
-                    }
-
-//                    else {
+                    } else {
 //                        /*
 //                         * if the first swipe was from right to left, dont listen to swipes
 //                         * from left to right. this fixes glitches where the user first swipes
@@ -91,9 +89,9 @@ public class ChildViewPager extends ViewPager {
 //                        this.slidingRight = true;
 //
 //                        // save the current x position
-//                        this.lastX = ev.getX();
-////                        this.getParent().requestDisallowInterceptTouchEvent(true);
-//                    }
+                        this.lastX = ev.getX();
+                        this.getParent().requestDisallowInterceptTouchEvent(true);
+                    }
                 } else if (this.getCurrentItem() == this.getAdapter().getCount() - 1) {
                 /*
                  * if this is the last item, scrolling from right to
@@ -105,11 +103,9 @@ public class ChildViewPager extends ViewPager {
 //                                && !this.slidingLeft
                             ) {
                         // make the parent touch interception active -> parent pager can swipe
-//                            this.getParent().requestDisallowInterceptTouchEvent(false);
+                        this.getParent().requestDisallowInterceptTouchEvent(false);
                         return false;
-                    }
-
-//                        else {
+                    } else {
 //                        /*
 //                         * if the first swipe was from left to right, dont listen to swipes
 //                         * from right to left. this fixes glitches where the user first swipes
@@ -118,9 +114,9 @@ public class ChildViewPager extends ViewPager {
 //                            this.slidingLeft = true;
 //
 //                            // save the current x position
-//                            this.lastX = ev.getX();
-//                            this.getParent().requestDisallowInterceptTouchEvent(true);
-//                        }
+                        this.lastX = ev.getX();
+                        this.getParent().requestDisallowInterceptTouchEvent(true);
+                    }
                 }
 
                 break;
