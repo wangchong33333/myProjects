@@ -10,6 +10,7 @@
 		<junit>4.9</junit>
 		<servlet-api>3.1.0</servlet-api>
 		<org.springframework.version>3.2.0.RELEASE</org.springframework.version>
+		<aspectjweaver>1.7.3</aspectjweaver>
 	</properties>
 
 	<dependencies>
@@ -65,6 +66,12 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectjweaver}</version>
 		</dependency>
 	</dependencies>
 
