@@ -106,3 +106,9 @@ rebel.xml
 hs_err_pid*
 *.class
 *.class
+
+/sspac/gui-config.json
+/sspac/Shadowsocks.exe
+/sspac/statistics-config.json
+/sspac/user-wininet.json
+/sspac/ss_win_temp
