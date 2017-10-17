@@ -13,7 +13,7 @@ import static com.turboes.ht.util.Constant.SYNC_KEY;
  * 作者：mrwang
  * 时间：2017/10/13:18:17
  * 邮箱：2384359843@qq.com
- * 说明：
+ * 说明：RFC 4615
  */
 public class AesCmacPrf128 {
     public static byte[] encryptAesCmacPrf128(byte[] message, byte[] key) {
