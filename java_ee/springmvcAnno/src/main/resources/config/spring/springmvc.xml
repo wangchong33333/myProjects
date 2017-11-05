@@ -13,34 +13,12 @@
        					   http://www.springframework.org/schema/context/spring-context.xsd
        					   http://www.springframework.org/schema/tx 
        					   http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<context:component-scan base-package="com.mrwang"></context:component-scan>
 
 	<bean
-		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean>
 	<bean
-		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"></bean>
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
-			<props>
-				<prop key="/mine.do">userController</prop>
-				<prop key="/ss.do">userController</prop>
-				<prop key="/you.do">http</prop>
-			</props>
-		</property>
-	</bean>
-
-
-	<bean
-		class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
-	<bean class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"></bean>
-
-
-	<bean name="/toAdd.do" class="com.mrwang.hellospringmvc.controller.ToAddController"></bean>
-	<bean name="/command.do"
-		class="com.mrwang.hellospringmvc.controller.CommandController"></bean>
-	<bean id="userController" name="/hello.do"
-		class="com.mrwang.hellospringmvc.controller.UserController"></bean>
-
-	<bean id="http" class="com.mrwang.hellospringmvc.controller.HttpController"></bean>
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"></bean>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
