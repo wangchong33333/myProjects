@@ -1,8 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
 
@@ -25,12 +24,46 @@
 </head>
 
 <body>
-	<form action="${pageContext.request.contextPath}/command.do" method="post">
-	姓名：<input type="text" name="username" id="username">
-	年龄：<input type="text" name="age" id="age">
-	生日：<input type="text" name="birthday" id="birthday">
-	地址：<input type="text" name="address" id="address">
-	<input type="submit" value="提交">
+	<form action="${pageContext.request.contextPath}/user/receiveUser.do"
+		method="post">
+		姓名：<input type="text" name="username" id="username"> 年龄：<input
+			type="text" name="age" id="age"> 生日：<input type="text"
+			name="birthday" id="birthday"> 地址：<input type="text"
+			name="address" id="address"> <input type="submit" value="提交">
+	</form>
+
+	<hr color="blue" size="12">
+	<form action="${pageContext.request.contextPath}/user/receiveInt.do"
+		method="post">
+		姓名：<input type="text" name="id" id="id"> <input type="submit"
+			value="提交">
+	</form>
+
+	<hr color="blue" size="12">
+	<form action="${pageContext.request.contextPath}/user/receiveStr.do"
+		method="post">
+		姓名：<input type="text" name="username" id="username"> <input
+			type="submit" value="提交">
+	</form>
+
+	<hr color="blue" size="12">
+	<form
+		action="${pageContext.request.contextPath}/user/receiveUserCustom.do"
+		method="post">
+		姓名：<input type="text" name="user.username" id="username"> 年龄：<input
+			type="text" name="user.age" id="age"> 生日：<input type="text"
+			name="user.birthday" id="birthday"> 地址：<input type="text"
+			name="user.address" id="address"> <input type="submit"
+			value="提交">
+	</form>
+
+	<hr color="blue" size="12">
+	<form action="${pageContext.request.contextPath}/user/receiveIds.do"
+		method="post">
+		ID:<input type="checkbox" name="ids" id="ids" value="1"> ID:<input
+			type="checkbox" name="ids" id="ids" value="2"> ID:<input
+			type="checkbox" name="ids" id="ids" value="3"> <input
+			type="submit" value="提交">
 	</form>
 </body>
 </html>
