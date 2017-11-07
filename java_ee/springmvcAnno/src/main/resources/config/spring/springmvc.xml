@@ -17,14 +17,47 @@
 
 	<mvc:annotation-driven />
 
-<!-- 	<bean -->
-<!-- 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean> -->
-<!-- 	<bean -->
-<!-- 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"> -->
-<!-- 		<property name="messageConverters"> -->
-<!-- 		<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean> -->
-<!-- 		</property> -->
-<!-- 	</bean> -->
+	<!-- <bean -->
+	<!-- class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean> -->
+	<!-- <bean -->
+	<!-- class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"> -->
+	<!-- <property name="messageConverters"> -->
+	<!-- <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+
+	<bean
+		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="contentNegotiationManager">
+			<bean
+				class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+				<property name="mediaTypes">
+					<map>
+						<entry key="json" value="application/json"></entry>
+						<entry key="xml" value="application/xml"></entry>
+					</map>
+				</property>
+			</bean>
+		</property>
+
+		<property name="defaultViews">
+			<list>
+				<bean
+					class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"></bean>
+				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
+					<constructor-arg>
+						<bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+							<property name="classesToBeBound">
+								<list>
+									<value>com.mrwang.domain.User</value>
+								</list>
+							</property>
+						</bean>
+					</constructor-arg>
+				</bean>
+			</list>
+		</property>
+	</bean>
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

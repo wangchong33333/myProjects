@@ -2,6 +2,9 @@ package com.mrwang.domain;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class User {
 	private Integer id;
 	private String username;

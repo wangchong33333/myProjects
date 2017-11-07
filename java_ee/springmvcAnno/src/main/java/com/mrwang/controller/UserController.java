@@ -132,10 +132,22 @@ public class UserController {
 		System.out.println(user);
 		return user;
 	}
-	
+
 	@RequestMapping("requestPojo")
-	public @ResponseBody User requestPojo(User user){
+	public @ResponseBody User requestPojo(User user) {
 		System.out.println(user);
 		return user;
+	}
+
+	@RequestMapping("multiView")
+	public User multiView() {
+		User user1 = new User();
+		user1.setUsername("you");
+		user1.setAddress("武汉");
+		user1.setAge("12");
+		user1.setBirthday(new Date());
+		user1.setId(1);
+
+		return user1;
 	}
 }

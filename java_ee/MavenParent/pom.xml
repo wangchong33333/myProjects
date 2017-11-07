@@ -133,6 +133,14 @@
 			<version>${org.springframework.version}</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-oxm -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+
 
 
 		<!-- https://mvnrepository.com/artifact/org.mybatis.caches/mybatis-ehcache -->
