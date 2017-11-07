@@ -65,5 +65,25 @@
 			type="checkbox" name="ids" id="ids" value="3"> <input
 			type="submit" value="提交">
 	</form>
+	
+	<hr color="blue" size="12">
+	<form action="${pageContext.request.contextPath}/user/receiveUserCustomList.do"
+		method="post">
+		姓名：<input type="text" name="userList[0].username" id="username"> 
+		年龄：<input	type="text" name="userList[0].age" id="age"> 
+		姓名：<input type="text" name="userList[1].username" id="username"> 
+		年龄：<input	type="text" name="userList[1].age" id="age"> 
+		
+		<input	type="submit" value="提交">
+	</form>
+	
+	<hr color="blue" size="12">
+	<form action="${pageContext.request.contextPath}/user/receiveUserCustomMap.do"
+		method="post">
+		姓名：<input type="text" name="maps['username']" id="username"> 
+		年龄：<input	type="text" name="maps['age']" id="age"> 
+		
+		<input	type="submit" value="提交">
+	</form>
 </body>
 </html>
