@@ -4,18 +4,19 @@ import java.util.Date;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+//@XmlRootElement
 public class User {
 	private Integer id;
 	private String username;
 	private String age;
 	private Date birthday;
 	private String address;
-
 	public Integer getId() {
+		
 		return id;
 	}
 
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
