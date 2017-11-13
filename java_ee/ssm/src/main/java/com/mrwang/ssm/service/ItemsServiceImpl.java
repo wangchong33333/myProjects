@@ -22,4 +22,17 @@ public class ItemsServiceImpl implements ItemsService {
 		return list;
 	}
 
+	@Override
+	public Items findByID(Integer id) {
+		// TODO Auto-generated method stub
+		Items items = itemsMapper.selectByPrimaryKey(id);
+		return items;
+	}
+
+	@Override
+	public void saveOrUpdate(Items items) {
+		// TODO Auto-generated method stub
+		itemsMapper.updateByPrimaryKey(items);
+	}
+
 }
