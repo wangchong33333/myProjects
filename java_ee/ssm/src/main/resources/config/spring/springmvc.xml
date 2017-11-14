@@ -26,42 +26,47 @@
 	<!-- </property> -->
 	<!-- </bean> -->
 
-<!-- 	<bean -->
-<!-- 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver"> -->
-<!-- 		<property name="contentNegotiationManager"> -->
-<!-- 			<bean -->
-<!-- 				class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean"> -->
-<!-- 				<property name="mediaTypes"> -->
-<!-- 					<map> -->
-<!-- 						<entry key="json" value="application/json"></entry> -->
-<!-- 						<entry key="xml" value="application/xml"></entry> -->
-<!-- 					</map> -->
-<!-- 				</property> -->
-<!-- 			</bean> -->
-<!-- 		</property> -->
+	<!-- <bean -->
+	<!-- class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver"> -->
+	<!-- <property name="contentNegotiationManager"> -->
+	<!-- <bean -->
+	<!-- class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean"> -->
+	<!-- <property name="mediaTypes"> -->
+	<!-- <map> -->
+	<!-- <entry key="json" value="application/json"></entry> -->
+	<!-- <entry key="xml" value="application/xml"></entry> -->
+	<!-- </map> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+	<!-- </property> -->
 
-<!-- 		<property name="defaultViews"> -->
-<!-- 			<list> -->
-<!-- 				<bean -->
-<!-- 					class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"></bean> -->
-<!-- 				<bean class="org.springframework.web.servlet.view.xml.MarshallingView"> -->
-<!-- 					<constructor-arg> -->
-<!-- 						<bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller"> -->
-<!-- 							<property name="classesToBeBound"> -->
-<!-- 								<list> -->
-<!-- 									<value>com.mrwang.domain.User</value> -->
-<!-- 								</list> -->
-<!-- 							</property> -->
-<!-- 						</bean> -->
-<!-- 					</constructor-arg> -->
-<!-- 				</bean> -->
-<!-- 			</list> -->
-<!-- 		</property> -->
-<!-- 	</bean> -->
+	<!-- <property name="defaultViews"> -->
+	<!-- <list> -->
+	<!-- <bean -->
+	<!-- class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"></bean> -->
+	<!-- <bean class="org.springframework.web.servlet.view.xml.MarshallingView"> -->
+	<!-- <constructor-arg> -->
+	<!-- <bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller"> -->
+	<!-- <property name="classesToBeBound"> -->
+	<!-- <list> -->
+	<!-- <value>com.mrwang.domain.User</value> -->
+	<!-- </list> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+	<!-- </constructor-arg> -->
+	<!-- </bean> -->
+	<!-- </list> -->
+	<!-- </property> -->
+	<!-- </bean> -->
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsps/"></property>
 		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10240000"></property>
 	</bean>
 </beans>

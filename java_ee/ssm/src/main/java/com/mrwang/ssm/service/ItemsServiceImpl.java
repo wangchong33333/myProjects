@@ -35,4 +35,10 @@ public class ItemsServiceImpl implements ItemsService {
 		itemsMapper.updateByPrimaryKey(items);
 	}
 
+	@Override
+	public void deleteByID(Integer id) {
+		// TODO Auto-generated method stub
+		itemsMapper.deleteByPrimaryKey(id);
+	}
+
 }

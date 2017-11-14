@@ -12,4 +12,6 @@ public interface ItemsService {
 
 	void saveOrUpdate(Items items);
 
+	void deleteByID(Integer id);
+
 }

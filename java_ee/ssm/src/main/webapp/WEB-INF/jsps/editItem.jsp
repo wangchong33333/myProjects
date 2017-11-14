@@ -25,9 +25,10 @@
 			</tr>
 			<tr>
 				<td>商品生产日期</td>
-				<fmt:formatDate var="auxvarfechatoprint" value="${item.createtime}" pattern="yyyy-MM-dd HH:mm:ss"/>
+				<%-- 				<fmt:formatDate var="auxvarfechatoprint" value="${item.createtime}" pattern="yyyy-MM-dd HH:mm:ss"/> --%>
 				<td><input type="text" name="createtime"
-					value="<c:out value="${auxvarfechatoprint}"/>" /></td>
+					value="<fmt:formatDate value="${item.createtime}" pattern="yyyy/MM/dd HH:mm:ss"/>" />
+</td>
 			</tr>
 			<tr>
 				<td>商品图片</td>
