@@ -9,28 +9,12 @@
 <title>修改商品信息</title>
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/js/jquery.js"></script>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/jquery.form.js"></script>
 <script type="text/javascript">
 	function submitImgSize1Upload() {
-		var option = {
+		$.ajax({
 			type : 'POST',
-			url : '${pageContext.request.contextPath}/upload/uploadPic.do',
-			dataType : "text",
-			data : {
-				fileName : "imgSize1File"
-			},
-			success : function(data) {
-
-				var jsonObj = $.parseJSON(data);
-
-				$("#imgSize1ImgSrc").attr("src", jsonObj.fullPath);
-
-				$("#imgSize1").val(jsonObj.relativePath);
-			}
-		}
-
-		$("#itemForm").ajaxSubmit(option);
+			url : '${pageContext.request.contextPath}/upload/uploadPic.do'
+		})
 	}
 </script>
 
