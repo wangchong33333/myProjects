@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<c:set var="picPath" value="http://127.0.0.1:8003/ssmupload"></c:set>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,8 +10,7 @@
 <title>查询商品列表</title>
 </head>
 <body>
-	<form
-		action="${pageContext.request.contextPath }/items/deleteByIds.do"
+	<form action="${pageContext.request.contextPath }/items/deleteByIds.do"
 		method="post">
 		查询条件：
 		<table width="100%" border=1>
@@ -23,6 +23,7 @@
 		<table width="100%" border=1>
 			<tr>
 				<td>商品名称</td>
+				<td>商品图片</td>
 				<td>商品价格</td>
 				<td>生产日期</td>
 				<td>商品描述</td>
@@ -30,10 +31,11 @@
 			</tr>
 			<c:forEach items="${itemsList }" var="item">
 				<tr>
-					<td>
-					<input type="checkbox" name="id" value="${item.id}">
+					<td><input type="checkbox" name="id" value="${item.id}">
 					</td>
 					<td>${item.name }</td>
+					<td><img id='imgSize1ImgSrc' src='${picPath }${item.pic }'
+						height="100" width="100" /></td>
 					<td>${item.price }</td>
 					<td><fmt:formatDate value="${item.createtime}"
 							pattern="yyyy-MM-dd HH:mm:ss" /></td>
