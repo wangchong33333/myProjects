@@ -17,6 +17,21 @@
 
 	<mvc:annotation-driven />
 
+	<!-- freemarker -->
+	<!-- <bean -->
+	<!-- class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer"> -->
+	<!-- <property name="templateLoaderPath" value="/WEB-INF/jsps"></property> -->
+	<!-- <property name="defaultEncoding" value="UTF-8"></property> -->
+	<!-- </bean> -->
+
+	<!-- <bean -->
+	<!-- class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver"> -->
+	<!-- <property name="suffix" value=".ftl"></property> -->
+	<!-- <property name="contentType" value="text/html;charset=utf-8"></property> -->
+	<!-- </bean> -->
+
+
+
 	<!-- <bean -->
 	<!-- class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean> -->
 	<!-- <bean -->
@@ -69,4 +84,18 @@
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="10240000"></property>
 	</bean>
+
+	<!--拦截器 -->
+	<mvc:interceptors>
+		<!--多个拦截器,顺序执行 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.mrwang.ssm.interceptor.Interceptor1"></bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.mrwang.ssm.interceptor.Interceptor2"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+
 </beans>
