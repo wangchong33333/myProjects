@@ -1,0 +1,10 @@
+﻿启动zookeeper：
+/usr/local/zookeeper-3.4.6/bin/zkServer.sh start
+
+启动nginx：
+/usr/local/nginx/sbin/nginx
+
+启动fdfs：
+/usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf restart
+/usr/bin/fdfs_storaged /etc/fdfs/storage.conf
+/usr/local/nginx/sbin/nginx
