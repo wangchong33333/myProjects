@@ -15,6 +15,11 @@
 			<artifactId>e3-manager-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.mrwang</groupId>
+			<artifactId>e3-content-interface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 		<!-- <dependency> -->
 		<!-- <groupId>com.github.pagehelper</groupId> -->
@@ -91,12 +96,12 @@
 			<artifactId>zkclient</artifactId>
 		</dependency>
 
-
+		<!-- 文件上传组件 -->
 		<dependency>
-			<groupId>fastdfs_client</groupId>
-			<artifactId>fastdfs_client</artifactId>
-			<version>1.25</version>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
 		</dependency>
+
 
 		<dependency>
 			<groupId>junit</groupId>
