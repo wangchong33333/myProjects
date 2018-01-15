@@ -8,3 +8,16 @@
 /usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf restart
 /usr/bin/fdfs_storaged /etc/fdfs/storage.conf
 /usr/local/nginx/sbin/nginx
+
+启动redis：
+/usr/local/redis/bin/redis-server redis.conf
+启动redis集群：
+/usr/local/redis-cluster/start-all.sh
+集群第一次需要：
+/usr/local/redis-cluster/redis-trib.rb create --replicas 1 192.168.25.126:7001 192.168.25.126:7002 192.168.25.126:7003 192.168.25.126:7004 192.168.25.126:7005 192.168.25.126:7006
+
+克隆linux虚拟机：
+重新生成mac
+rm -f /etc/udev/rules.d/70-persistent-net.rules
+vim /etc/sysconfig/network-scripts/ifcfg-eth0
+init 6

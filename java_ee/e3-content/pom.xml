@@ -11,6 +11,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+	<modules>
+		<module>e3-content-interface</module>
+		<module>e3-content-service</module>
+	</modules>
 	<dependencies>
 		<dependency>
 			<groupId>com.mrwang</groupId>
@@ -18,10 +22,6 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
-	<modules>
-		<module>e3-content-interface</module>
-		<module>e3-content-service</module>
-	</modules>
 	<build>
 		<plugins>
 			<!-- 配置Tomcat插件 -->

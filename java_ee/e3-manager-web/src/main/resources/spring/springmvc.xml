@@ -43,5 +43,7 @@
 		id="contentCatService" />
 	<dubbo:reference interface="com.mrwang.content.service.ContentService"
 		id="contentService" />
+	<dubbo:reference interface="com.mrwang.search.service.SearchItemService"
+		id="searchItemService" />
 
 </beans>
