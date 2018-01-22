@@ -6,4 +6,6 @@ import com.mrwang.common.pojo.SearchItem;
 
 public interface ItemMapper {
 	List<SearchItem> getItemList();
+
+	SearchItem getItemById(long itemId);
 }

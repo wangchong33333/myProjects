@@ -18,10 +18,12 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+	<bean class="com.mrwang.search.exception.GlobalExceptionResolver"></bean>
+
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="e3-search-web" />
 	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181" />
-	<!-- <dubbo:reference interface="com.mrwang.content.service.ContentService" -->
-	<!-- id="contentService" /> -->
+	<dubbo:reference interface="com.mrwang.search.service.SearchService"
+		id="searchService" />
 
 </beans>

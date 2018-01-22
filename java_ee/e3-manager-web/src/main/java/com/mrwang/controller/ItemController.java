@@ -20,7 +20,7 @@ public class ItemController {
 	@RequestMapping("/item/{itemId}")
 	@ResponseBody
 	public TbItem geItemById(@PathVariable Long itemId) {
-		TbItem tbItem = itemService.geItemById(itemId);
+		TbItem tbItem = itemService.getItemById(itemId);
 		return tbItem;
 	}
 
