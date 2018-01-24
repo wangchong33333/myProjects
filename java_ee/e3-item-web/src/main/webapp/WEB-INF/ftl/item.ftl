@@ -55,7 +55,7 @@
 <!-- header start -->
 <#include "commons/header.ftl" />
 <!-- header end -->
-<jsp:include page="commons/mainmenu.jsp" />
+<#include "commons/mainmenu.ftl" />
 <div class="linknav"><div class="breadcrumb"><strong><a href="/food/6-0-0-0-0-2-0-0-0-0-0.html">休闲食品</a></strong><span> &gt; <a href="/food/7321-0-0-0-0-2-0-0-0-0-0.html">月饼</a> &gt; <a href="/food/7331-0-0-0-0-2-0-0-0-0-0.html">其他月饼</a> &gt; <a href="http://www.e3mall.cn/pinpai/7331-10863.html">我是花吃</a> &gt; 我是花吃 我是花吃鲜花月饼团圆礼盒390g</span></div></div>
 <div class="pWrap">
     <div class="productIntro">
@@ -70,7 +70,7 @@
                 <div class="pItemsPrice" id="price-sf">
                 	<div class="priceBox">
                 		<span class="dt">优选价：</span><span class="rmb">￥</span>
-                		<strong class="price"><fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${item.price / 100 }"/></strong>
+                		<strong class="price">${item.price / 100 }</strong>
                 	</div>
                 	<div class="boxWb"></div><div id="productStamp" class="productStamp_1"></div></div>
                 <div class="clear"></div>
@@ -161,9 +161,9 @@
         
                     <div class="pic-items" style="position: absolute; width: 50px; height: 300px; overflow: hidden;">
                         <ul style="position: absolute; left: 0px; top: 0px; height: 240px;">
-                           <c:forEach items="${item.images }" var="image">
+                           <#list item.images as image>
                            <li style="float: left;"><img title="${item.title } " alt="${item.title }" src="${image }"></li>
-                           </c:forEach>
+                           </#list>
                         </ul>
                     </div>
                 </div>
@@ -353,6 +353,6 @@
     <div class="clear"></div>    
 </div>
 <div class="clear1"></div>
-<jsp:include page="commons/footer.jsp" />
+<#include "commons/footer.ftl" />
 </body>
 </html>

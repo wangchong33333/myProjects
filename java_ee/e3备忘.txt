@@ -10,6 +10,7 @@
 /usr/local/nginx/sbin/nginx
 
 启动redis：
+cd /usr/local/redis/bin/
 /usr/local/redis/bin/redis-server redis.conf
 启动redis集群：
 /usr/local/redis-cluster/start-all.sh
@@ -26,6 +27,7 @@ init 6
 /usr/local/solr/tomcat/bin/startup.sh
 启动solr-cloud：
 zookeeper集群：
+cd /usr/local/solr-cloud/
 /usr/local/solr-cloud/start-all.sh
 solr集群：
 /usr/local/solr-cloud/start-tomcat-all.sh

@@ -3,18 +3,22 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.mrwang</groupId>
-		<artifactId>e3-parent</artifactId>
+		<artifactId>e3-sso</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.mrwang</groupId>
-	<artifactId>e3-item-web</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>e3-sso-service</artifactId>
 	<packaging>war</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.mrwang</groupId>
-			<artifactId>e3-manager-interface</artifactId>
+			<artifactId>e3-manager-dao</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mrwang</groupId>
+			<artifactId>e3-sso-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
@@ -48,22 +52,6 @@
 			<artifactId>spring-context-support</artifactId>
 		</dependency>
 
-		<!-- JSP相关 -->
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jsp-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
 		<!-- dubbo相关 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -78,6 +66,7 @@
 					<artifactId>netty</artifactId>
 				</exclusion>
 			</exclusions>
+
 		</dependency>
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
@@ -88,33 +77,7 @@
 			<artifactId>zkclient</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-		</dependency>
 
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-		</dependency>
 
-		<dependency>
-			<groupId>org.apache.activemq</groupId>
-			<artifactId>activemq-all</artifactId>
-		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<!-- 配置Tomcat插件 -->
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<configuration>
-					<path>/</path>
-					<port>8086</port>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 </project>
