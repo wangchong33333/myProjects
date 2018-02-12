@@ -1,0 +1,34 @@
+[{
+  "id": "side-bar-files-open-with",
+  "children": [
+    //application 1
+    {
+      "caption": "Chrome",
+      "id": "side-bar-files-open-with-chrome",
+      "command": "side_bar_files_open_with",
+      "args": {
+        "paths": [],
+        "application": "C:/Users/zce/AppData/Local/Google/Chrome/Application/chrome.exe",
+        "extensions": ".*", //any file with extension
+        "args": []
+      },
+      "open_automatically": false // will close the view/tab and launch the application
+    },
+    //separator
+    {
+      "caption": "-"
+    },
+    {
+      "caption": "Command",
+      "id": "side-bar-files-open-with-command",
+      "command": "side_bar_files_open_with",
+      "args": {
+        "paths": [],
+        "application": "C:/Windows/System32/cmd.exe",
+        // "extensions": ".*", //any file with extension
+        "args": []
+      },
+      "open_automatically": false // will close the view/tab and launch the application
+    }
+  ]
+}]

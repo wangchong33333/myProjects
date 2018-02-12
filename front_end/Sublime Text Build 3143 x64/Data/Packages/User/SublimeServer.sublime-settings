@@ -1,0 +1,15 @@
+{
+	"attempts": 5,
+	"autorun": false,
+	"defaultExtension": ".html",
+	"interval": 500,
+	"mimetypes":
+	{
+		"": "application/octet-stream",
+		".c": "text/plain",
+		".h": "text/plain",
+		".md": "text/plain",
+		".py": "text/plain"
+	},
+	"port": 2016
+}
