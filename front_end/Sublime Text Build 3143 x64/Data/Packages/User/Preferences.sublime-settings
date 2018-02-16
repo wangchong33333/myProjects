@@ -66,8 +66,6 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"0_package_control_loader",
-		"All Autocomplete",
 		"AngularJS",
 		"AVA",
 		"Babel Snippets",

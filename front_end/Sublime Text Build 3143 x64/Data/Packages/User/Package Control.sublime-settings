@@ -5,15 +5,16 @@
 	],
 	"installed_packages":
 	[
+		"3D Tool (Async Burst-Mode)",
 		"AdvancedNewFile",
-		"All Autocomplete",
 		"AngularJS",
-		"AutoFileName",
 		"AVA",
 		"Babel",
+		"Babel Snippets",
 		"ChineseLocalizations",
 		"ColorPicker",
 		"ConvertToUTF8",
+		"CSS Extended Completions",
 		"DocBlockr",
 		"EditorConfig",
 		"Emmet",
@@ -36,6 +37,7 @@
 		"SideBarFolders",
 		"SideBarGit",
 		"StandardFormat",
+		"SublimeCodeIntel",
 		"SublimeLinter",
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",
@@ -45,5 +47,9 @@
 		"TodoReview",
 		"Vue Syntax Highlight",
 		"Xtemplate"
+	],
+	"repositories":
+	[
+		"https://github.com/andruhon/SublimeAllAutocomplete"
 	]
 }
