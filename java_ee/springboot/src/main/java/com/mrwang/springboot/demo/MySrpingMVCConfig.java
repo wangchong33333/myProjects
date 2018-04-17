@@ -1,9 +1,14 @@
 package com.mrwang.springboot.demo;
 
+import java.nio.charset.Charset;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -38,12 +43,10 @@ public class MySrpingMVCConfig extends WebMvcConfigurerAdapter {
 	}
 
 	// // 自定义消息转化器的第二种方法，比bean的优先级高
-	// @Override
-	// public void configureMessageConverters(List<HttpMessageConverter<?>>
-	// converters) {
-	// StringHttpMessageConverter converter = new
-	// StringHttpMessageConverter(Charset.forName("UTF-8"));
-	// converters.add(converter);
-	// }
+//	@Override
+//	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+//		StringHttpMessageConverter converter = new StringHttpMessageConverter(Charset.forName("UTF-8"));
+//		converters.add(converter);
+//	}
 
 }

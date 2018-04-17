@@ -10,9 +10,10 @@ import org.springframework.context.annotation.PropertySource;
 
 import com.jolbox.bonecp.BoneCPDataSource;
 import com.mrwang.springboot.dao.UserDAO;
+import com.mrwang.springboot.utils.jedis.JedisClient;
+import com.mrwang.springboot.utils.jedis.JedisClientPool;
 
 @Configuration // 通过该注解来表明该类是一个Spring的配置，相当于一个xml文件
-@ComponentScan(basePackages = "com.mrwang.springboot") // 配置扫描包
 @PropertySource(value = { "classpath:jdbc.properties" }, ignoreResourceNotFound = true)
 public class SpringConfig {
 

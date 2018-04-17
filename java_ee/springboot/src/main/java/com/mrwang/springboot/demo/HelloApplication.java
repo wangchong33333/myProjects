@@ -5,26 +5,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.context.annotation.ComponentScan;
 
-@Controller
 @SpringBootApplication(exclude = { RedisAutoConfiguration.class })
+@ComponentScan(basePackages = "com.mrwang.springboot") // 配置扫描包
 public class HelloApplication extends SpringBootServletInitializer {
 
-	@RequestMapping("hello")
-	@ResponseBody
-	public String hello() {
-		return "hello world！雷猴啊";
-	}
-
-	// @Bean
-	// public StringHttpMessageConverter stringHttpMessageConverter() {
-	// StringHttpMessageConverter converter = new
-	// StringHttpMessageConverter(Charset.forName("ISO-8859-1"));
-	// return converter;
-	// }
+//	@Bean
+//	public StringHttpMessageConverter stringHttpMessageConverter() {
+//		// StringHttpMessageConverter converter = new
+//		// StringHttpMessageConverter(Charset.forName("ISO-8859-1"));
+//		StringHttpMessageConverter converter = new StringHttpMessageConverter(Charset.forName("ISO-8859-1"));
+//		return converter;
+//	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
