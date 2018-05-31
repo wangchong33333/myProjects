@@ -4,6 +4,7 @@
 var proxy = "__PROXY__";
 
 var rules = [
+  "||thethingsnetwork.org",
   "||docker-cn.com",
   "||docker.com",
   "||gitbooks.io",

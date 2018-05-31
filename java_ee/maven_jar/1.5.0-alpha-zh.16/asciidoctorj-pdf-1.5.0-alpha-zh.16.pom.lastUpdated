@@ -1,0 +1,8 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed May 30 21:13:36 CST 2018
+http\://maven.aliyun.com/nexus/content/groups/public/.error=
+http\://jcenter.bintray.com/.lastUpdated=1527686016049
+http\://jcenter.bintray.com/.error=
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.asciidoctor\:asciidoctorj-pdf\:pom\:1.5.0-alpha-zh.16 from/to jcenter-snapshots (http\://oss.jfrog.org/artifactory/oss-snapshot-local/)\: Failed to transfer file\: http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/asciidoctor/asciidoctorj-pdf/1.5.0-alpha-zh.16/asciidoctorj-pdf-1.5.0-alpha-zh.16.pom. Return code is\: 409 , ReasonPhrase\:.
+@default-jcenter-snapshots-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1527686016347
+http\://maven.aliyun.com/nexus/content/groups/public/.lastUpdated=1527686016724
