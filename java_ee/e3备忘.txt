@@ -12,8 +12,7 @@
 启动redis：
 /usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf
 
-cd /usr/local/redis/bin/
-/usr/local/redis/bin/redis-server redis.conf
+/usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf
 启动redis集群：
 /usr/local/redis-cluster/start-all.sh
 集群第一次需要：
