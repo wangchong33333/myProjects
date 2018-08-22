@@ -7,3 +7,4 @@
 测试上传下载，批量，特定接口文件大小限制代码
 @Transactional(propagation = Propagation.REQUIRED) 没有回滚，测试回滚方法，及对以前项目的影响
 测试下Jersey
+测试下nio和netty
