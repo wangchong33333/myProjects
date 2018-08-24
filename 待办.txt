@@ -8,3 +8,4 @@
 @Transactional(propagation = Propagation.REQUIRED) 没有回滚，测试回滚方法，及对以前项目的影响
 测试下Jersey
 测试下nio和netty
+用单步看源码
