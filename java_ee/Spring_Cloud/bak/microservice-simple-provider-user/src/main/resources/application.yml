@@ -1,0 +1,22 @@
+server:
+  port: 7900
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+#    schema: classpath:schema.sql #默认位置可不配
+#    data: classpath:data.sql #默认位置可不配
+#  jackson:
+#    serialization:
+#      fail-on-empty-beans: false
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+    com.itmuch: debug
