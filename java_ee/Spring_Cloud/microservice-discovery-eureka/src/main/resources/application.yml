@@ -3,7 +3,15 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://user:123@localhost:8761/eureka
     #只使用server，不使用client
     fetch-registry: false
     register-with-eureka: false
+spring:
+  security:
+    user:
+      name: user
+      #123
+#      password: $2a$10$bO/sjLZe3W3sLtNxsgZ3JOH4AIRQUNQAmIafF8F.tlEwOiCk77YTW
+      password: 123
+      roles: USER
