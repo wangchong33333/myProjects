@@ -1,13 +1,13 @@
 server:
-  port: 7900
+  port: 7903
 spring:
   application:
-    name: microservice-provider-user
+    name: microservice-provider-user2
   jpa:
     generate-ddl: false
     show-sql: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
   datasource:
     platform: h2
 #    schema: classpath:schema.sql #默认位置可不配
