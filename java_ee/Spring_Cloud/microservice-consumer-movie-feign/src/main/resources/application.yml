@@ -1,0 +1,13 @@
+server:
+  port: 7993
+
+spring:
+  application:
+      name: microservice-consumer-movie-feign
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true #默认是false，EurekaDiscoveryClientConfiguration;前提加actuator依赖
+    serviceUrl:
+      defaultZone: http://user:123@localhost:8761/eureka
