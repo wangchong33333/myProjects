@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class User{
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -19,6 +19,14 @@ public class User{
     private Short age;
     @Column
     private BigDecimal balance;
+
+    public User() {
+    }
+
+    public User(Long id, String username) {
+        this.id = id;
+        this.username = username;
+    }
 
     public Long getId() {
         return id;

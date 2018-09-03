@@ -1,6 +1,7 @@
 server:
   port: 8761
 eureka:
+  environment: product
   client:
     service-url:
       defaultZone: http://user:123@localhost:8761/eureka

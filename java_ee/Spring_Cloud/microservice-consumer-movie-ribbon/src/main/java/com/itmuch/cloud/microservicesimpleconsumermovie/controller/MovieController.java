@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.List;
+
 @RestController
 public class MovieController {
     @Autowired
@@ -32,4 +34,11 @@ public class MovieController {
 
         return "1";
     }
+
+    @GetMapping("/get-users")
+    public List<User> getUsers() {
+        List<User> users = restTemplate.getForObject("http://microservice-provider-user/get-users", List.class);
+        return users;
+    }
+
 }

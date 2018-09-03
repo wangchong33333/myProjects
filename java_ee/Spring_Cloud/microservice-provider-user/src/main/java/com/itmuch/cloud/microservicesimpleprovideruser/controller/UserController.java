@@ -9,6 +9,7 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -46,5 +47,15 @@ public class UserController {
     @GetMapping("/get-user")
     public User getUser(User user) {
         return user;
+    }
+
+    @GetMapping("/get-users")
+    public List<User> getUsers(User user) {
+        List<User> users = new ArrayList<>();
+        users.add(new User(1L, "张三"));
+        users.add(new User(1L, "张三"));
+        users.add(new User(1L, "张三"));
+        users.add(new User(1L, "张三"));
+        return users;
     }
 }

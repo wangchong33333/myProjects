@@ -12,6 +12,7 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
+//配了这个，feign使用的就是LoadBalancerFeignClient
 @RibbonClient(name = "microservice-provider-user", configuration = TestConfiguration.class)
 //@ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = ExcludeFromComponentScan.class)})
 @ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ASPECTJ, pattern = "com.itmuch.cloud.microservicesimpleconsumermovie.config.ignore.*")})

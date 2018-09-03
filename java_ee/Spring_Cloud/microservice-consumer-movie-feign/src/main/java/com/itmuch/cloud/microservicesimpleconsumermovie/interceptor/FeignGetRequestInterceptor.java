@@ -10,7 +10,7 @@ import org.springframework.util.StringUtils;
 import java.io.IOException;
 import java.util.*;
 
-public class YryzRequestInterceptor implements RequestInterceptor {
+public class FeignGetRequestInterceptor implements RequestInterceptor {
     @Autowired
     private ObjectMapper objectMapper;
 

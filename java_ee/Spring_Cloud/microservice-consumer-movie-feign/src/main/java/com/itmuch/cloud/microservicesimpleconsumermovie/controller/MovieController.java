@@ -1,18 +1,20 @@
 package com.itmuch.cloud.microservicesimpleconsumermovie.controller;
 
 import com.itmuch.cloud.microservicesimpleconsumermovie.entity.User;
+import com.itmuch.cloud.microservicesimpleconsumermovie.feignclient.EurekaFeignClient;
 import com.itmuch.cloud.microservicesimpleconsumermovie.feignclient.UserFeignClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class MovieController {
     @Autowired
     private UserFeignClient userFeignClient;
+
+    @Autowired
+    private EurekaFeignClient eurekaFeignClient;
 
     @GetMapping("/movie/{id}")
     public User findById(@PathVariable Long id) {
@@ -27,5 +29,10 @@ public class MovieController {
     @GetMapping("/get-user")
     public User getUser(User user) {
         return userFeignClient.getUser(user);
+    }
+
+    @GetMapping("/eureka/apps/{serviceName}")
+    public String findEurekaByServiceName(@PathVariable("serviceName") String serviceName) {
+        return eurekaFeignClient.findServiceInfoFromEurekaByServiceName(serviceName);
     }
 }

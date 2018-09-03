@@ -1,15 +1,14 @@
 package com.itmuch.cloud.microservicesimpleconsumermovie.feignclient;
 
+import com.itmuch.cloud.microservicesimpleconsumermovie.config.EurekaFeignClientConfiguration;
 import com.itmuch.cloud.microservicesimpleconsumermovie.entity.User;
-import feign.QueryMap;
-import feign.RequestLine;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient("microservice-provider-user")
+@FeignClient(name = "microservice-provider-user", configuration = EurekaFeignClientConfiguration.class)//, configuration = FeignConfiguration.class
 public interface UserFeignClient {
     @GetMapping("/simple/{id}")
     User findById(@PathVariable("id") Long id);
