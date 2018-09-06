@@ -8,16 +8,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "microservice-provider-user", configuration = EurekaFeignClientConfiguration.class)//, configuration = FeignConfiguration.class
+@FeignClient(name = "microservice-provider-user",
+        fallback = UserFeignClientFallback.class)//, configuration = FeignConfiguration.class
 public interface UserFeignClient {
     @GetMapping("/simple/{id}")
     User findById(@PathVariable("id") Long id);
 
-    @PostMapping("/user")
-    User postUser(@RequestBody User user);
-
-    @GetMapping("/get-user")
-    User getUser(User user);
+//    @PostMapping("/user")
+//    User postUser(@RequestBody User user);
+//
+//    @GetMapping("/get-user")
+//    User getUser(User user);
 
 //    @RequestLine("GET /get-user")
 //    User getUser(@QueryMap User user);

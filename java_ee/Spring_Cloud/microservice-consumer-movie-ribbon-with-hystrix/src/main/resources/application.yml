@@ -1,9 +1,9 @@
 server:
-  port: 7993
+  port: 7994
 
 spring:
   application:
-      name: microservice-consumer-movie-feign
+      name: microservice-consumer-movie-ribbon-with-hystrix
 
 eureka:
   client:
@@ -11,10 +11,6 @@ eureka:
       enabled: true #默认是false，EurekaDiscoveryClientConfiguration;前提加actuator依赖
     serviceUrl:
       defaultZone: http://user:123@localhost:8761/eureka
-
-logging:
-  level:
-    root: debug
 
 management:
   endpoints:
@@ -24,7 +20,3 @@ management:
   endpoint:
     health:
       show-details: always
-
-feign:
-  hystrix:
-    enabled: true
