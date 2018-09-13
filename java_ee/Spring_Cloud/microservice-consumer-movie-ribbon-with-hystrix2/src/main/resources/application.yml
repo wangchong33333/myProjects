@@ -1,11 +1,11 @@
 server:
-  port: 7994
+  port: 7996
   servlet:
     context-path: /ribbon
 
 spring:
   application:
-      name: microservice-consumer-movie-ribbon-with-hystrix
+      name: microservice-consumer-movie-ribbon-with-hystrix2
 
 eureka:
   client:

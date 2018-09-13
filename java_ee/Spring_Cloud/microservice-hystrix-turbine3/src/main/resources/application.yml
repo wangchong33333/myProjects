@@ -1,0 +1,25 @@
+server:
+  port: 8060
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123@localhost:8761/eureka #http://peer1:8761/eureka,http://peer2:8762/eureka,http://peer3:8763/eureka
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: microservice-hystrix-turbine3
+
+turbine:
+  aggregator:
+    clusterConfig: MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX3
+  appConfig: microservice-consumer-movie-ribbon-with-hystrix3
+#  cluster-name-expression: "'default'"
+logging:
+  level:
+    root: INFO
+    com.netfilx.turbine.monitor: DEBUG
+
+#turbine.instanceUrlSuffix.MICROSERVICE-CONSUMER-MOVIE-RIBBON-WITH-HYSTRIX2: ribbon/actuator/hystrix.stream
+

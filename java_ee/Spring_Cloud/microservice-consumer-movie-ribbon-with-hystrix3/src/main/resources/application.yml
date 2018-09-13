@@ -1,12 +1,10 @@
 server:
-  port: 7994
+  port: 7997
   servlet:
     context-path: /ribbon
-
 spring:
   application:
-      name: microservice-consumer-movie-ribbon-with-hystrix
-
+      name: microservice-consumer-movie-ribbon-with-hystrix3
 eureka:
   client:
     healthcheck:
@@ -16,6 +14,9 @@ eureka:
   instance:
     prefer-ip-address: true
     home-page-url-path: /ribbon
+    metadata-map:
+      management.port: ${management.port:7987}
+
 
 management:
   endpoints:
@@ -25,3 +26,5 @@ management:
   endpoint:
     health:
       show-details: always
+  server:
+    port: 7987 #spring-boot-actuator
