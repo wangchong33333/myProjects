@@ -1,0 +1,26 @@
+server:
+  port: 8070
+spring:
+  application:
+    name: microservice-gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+zuul:
+#  ignored-services: '*'
+  ignored-services: microservice-consumer-movie-ribbon,
+  routes:
+    abc: #命名唯一就行
+      path: /user/**
+      serviceId: users
+
+ribbon:
+  eureka:
+    enabled: false
+
+users:  #这边是serviceId
+  ribbon:
+    listOfServers: http://localhost:7900,http://localhost:7901
