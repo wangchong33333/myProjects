@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      uri: http://user:1234@localhost:8080
+      profile: dev
+      username: user
+      password: 123 #比url的优先级高
+#      name: foobar
+#      label: master #当config server后端存储是git时，默认是master

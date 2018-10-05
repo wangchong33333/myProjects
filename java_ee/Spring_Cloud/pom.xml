@@ -18,6 +18,8 @@
         <module>microservice-discovery-eureka</module>
         <module>microservice-discovery-eureka-ha</module>
         <module>microservice-config-server</module>
+        <module>microservice-config-client</module>
+        <module>microservice-config-client-refresh</module>
         <module>microservice-sidecar</module>
         <module>microservice-gateway-zuul</module>
         <module>microservice-gateway-zuul-filter</module>

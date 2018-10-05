@@ -6,4 +6,29 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/spring-cloud-samples/config-repo
+          uri: https://gitee.com/beijixiong333333/config-repo
+          search-paths:
+            - foo #搜索子文件夹
+            - bar
+            - test1
+          username:  #git账户密码
+          password:
+#          clone-on-start: true
+
+  security:
+    user:
+      name: user
+      #123
+#      password: $2a$10$bO/sjLZe3W3sLtNxsgZ3JOH4AIRQUNQAmIafF8F.tlEwOiCk77YTW
+      password: 123
+      roles: USER
+  application:
+    name: microservice-config-server
+
+#encrypt:
+#  key: foo #后续版本需要移到bootstrap里，否者无法加载
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123@localhost:8761/eureka

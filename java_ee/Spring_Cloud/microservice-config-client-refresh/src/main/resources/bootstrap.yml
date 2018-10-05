@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: microservice-config-server
+      profile: dev
+      username: user
+      password: 123 #比url的优先级高
+#      name: foobar
+#      label: master #当config server后端存储是git时，默认是master
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:123@localhost:8761/eureka
