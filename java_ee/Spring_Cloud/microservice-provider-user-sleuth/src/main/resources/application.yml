@@ -1,0 +1,45 @@
+server:
+  port: 6900
+spring:
+  application:
+    name: microservice-provider-user-sleuth
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: h2
+#    schema: classpath:schema.sql #默认位置可不配
+#    data: classpath:data.sql #默认位置可不配
+#  jackson:
+#    serialization:
+#      fail-on-empty-beans: false
+logging:
+  level:
+    root: info
+    org.hibernate: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+    com.itmuch: debug
+    org.springframework.web.servlet.DispatcherServlet: debug
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true #默认是false，EurekaDiscoveryClientConfiguration;前提加actuator依赖
+    serviceUrl:
+      defaultZone: http://user:123@localhost:8761/eureka #http://peer1:8761/eureka,http://peer2:8762/eureka,http://peer3:8763/eureka
+  instance:
+    appname: microservice-provider-user #填swigger坑
+    prefer-ip-address: true
+    metadata-map:
+      zone: wuhan
+      cwang: here
+#    instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+management:
+  endpoints:
+    web:
+      exposure:
+       include: "*"  # * 在yaml 文件属于关键字，所以需要加引号；开启actuator其它接口

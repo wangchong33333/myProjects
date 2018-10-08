@@ -30,19 +30,20 @@
         <module>microservice-hystrix-turbine</module>
         <module>microservice-hystrix-turbine2</module>
         <module>microservice-hystrix-turbine3</module>
-		<module>microservice-provider-user</module>
-		<module>microservice-file-upload</module>
-		<module>microservice-consumer-movie</module>
-		<module>microservice-consumer-movie-feign</module>
-		<module>microservice-consumer-movie-ribbon</module>
-		<module>microservice-consumer-movie-ribbon-properties-customizing</module>
-		<module>microservice-consumer-movie-ribbon-without-eureka</module>
-		<module>microservice-consumer-movie-ribbon-with-hystrix</module>
-		<module>microservice-consumer-movie-ribbon-with-hystrix2</module>
-		<module>microservice-consumer-movie-ribbon-with-hystrix3</module>
-		<module>microservice-consumer-movie-ribbon-with-hystrix-isolation</module>
-		<module>microservice-consumer-movie-feign-with-hystrix</module>
-		<module>microservice-consumer-movie-feign-with-hystrix-factory</module>
+        <module>microservice-provider-user</module>
+        <module>microservice-provider-user-sleuth</module>
+        <module>microservice-file-upload</module>
+        <module>microservice-consumer-movie</module>
+        <module>microservice-consumer-movie-feign</module>
+        <module>microservice-consumer-movie-ribbon</module>
+        <module>microservice-consumer-movie-ribbon-properties-customizing</module>
+        <module>microservice-consumer-movie-ribbon-without-eureka</module>
+        <module>microservice-consumer-movie-ribbon-with-hystrix</module>
+        <module>microservice-consumer-movie-ribbon-with-hystrix2</module>
+        <module>microservice-consumer-movie-ribbon-with-hystrix3</module>
+        <module>microservice-consumer-movie-ribbon-with-hystrix-isolation</module>
+        <module>microservice-consumer-movie-feign-with-hystrix</module>
+        <module>microservice-consumer-movie-feign-with-hystrix-factory</module>
     </modules>
 
     <parent>
