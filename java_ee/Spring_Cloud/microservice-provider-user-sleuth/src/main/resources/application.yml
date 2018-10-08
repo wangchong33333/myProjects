@@ -1,8 +1,6 @@
 server:
   port: 6900
 spring:
-  application:
-    name: microservice-provider-user-sleuth
   jpa:
     generate-ddl: false
     show-sql: true
