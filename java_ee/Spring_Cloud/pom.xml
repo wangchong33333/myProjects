@@ -15,6 +15,7 @@
     </properties>
 	
 	<modules>
+        <module>microservice-zipkin-server</module>
         <module>microservice-discovery-eureka</module>
         <module>microservice-discovery-eureka-ha</module>
         <module>microservice-config-server</module>
