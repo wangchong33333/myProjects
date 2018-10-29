@@ -13,3 +13,4 @@
 了解git钩子使用
 动态json解析
 了解controller对象参数限制问题，了解org.springframework.web.bind.annotation包使用
+分布式事务（调用第三方添加）
