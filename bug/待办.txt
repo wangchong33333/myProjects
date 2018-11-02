@@ -16,3 +16,4 @@
 分布式事务（调用第三方添加）
 service中抛异常设置code
 redisson jedis unexpected exception想办法测试出来并处理
+了解阿里巴巴开发手册使用场景
