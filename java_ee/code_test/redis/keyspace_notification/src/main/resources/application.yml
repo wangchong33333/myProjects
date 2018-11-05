@@ -1,0 +1,21 @@
+spring:
+  redis:
+    topic: __keyevent@0__:expired
+    host: 192.168.25.126
+    port: 6379
+    username:
+    password:
+    database: 0
+    timeout: 0
+    pool:
+      max-active: 100
+      max-wait: 1
+      max-idle: 50
+      min-idle: 0
+  task:
+    pool:
+      corePoolSize: 10
+      keepAliveSeconds: 60
+      maxPoolSize: 20
+      queueCapacity: 100
+      threadNamePrefix: myThreadPool

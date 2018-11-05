@@ -11,6 +11,9 @@
 
 启动redis：
 /usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf
+关闭redis：
+/usr/local/redis/bin/redis-cli -h 127.0.0.1 -p 6379 shutdown
+/usr/local/redis/bin/redis-cli -a 密码 -h 127.0.0.1 -p 6379 shutdown
 
 /usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf
 启动redis集群：
