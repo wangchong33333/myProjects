@@ -9,7 +9,6 @@
 测试下Jersey
 测试下nio和netty
 用单步看源码
-想办法测试java并发用处及方法
 了解git钩子使用
 动态json解析
 了解controller对象参数限制问题，了解org.springframework.web.bind.annotation包使用
