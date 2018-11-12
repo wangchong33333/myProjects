@@ -28,10 +28,11 @@ eureka:
     healthcheck:
       enabled: true #默认是false，EurekaDiscoveryClientConfiguration;前提加actuator依赖
     serviceUrl:
+#       defaultZone: http://user:123@192.168.2.161:9999/eureka
       defaultZone: http://user:123@localhost:8761/eureka #http://peer1:8761/eureka,http://peer2:8762/eureka,http://peer3:8763/eureka
   instance:
     appname: microservice-provider-user #填swigger坑
-    prefer-ip-address: true
+    prefer-ip-address: true  #当服务和eureka，zuul不在一起时，是必须的
     metadata-map:
       zone: wuhan
       cwang: here

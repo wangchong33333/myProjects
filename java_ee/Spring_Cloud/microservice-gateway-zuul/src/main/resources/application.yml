@@ -14,6 +14,11 @@ hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
+#zuul:
+##  ignored-services: '*'
+##  ignored-services: microservice-consumer-movie-ribbon,
+#  routes:
+#    microservice-provider-user: /user/**
 
 management:
   endpoints:

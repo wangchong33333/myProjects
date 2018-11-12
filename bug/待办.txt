@@ -17,3 +17,5 @@ service中抛异常设置code
 redisson jedis unexpected exception想办法测试出来并处理
 了解阿里巴巴开发手册使用场景
 了解github spring boot搜索的项目
+禅道与钉钉与邮件
+idea格式化sql问题
