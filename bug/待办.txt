@@ -20,3 +20,4 @@ redisson jedis unexpected exception想办法测试出来并处理
 了解github spring boot搜索的项目
 禅道与钉钉与邮件
 mybatis时间比较，datesub（），condition使用，排序
+测试自定义属性时，spring-boot-configuration-processor是否是必须的
