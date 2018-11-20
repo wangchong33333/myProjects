@@ -11,7 +11,7 @@
 
 启动redis：
 /usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf
-关闭redis：
+关闭redis：（redis改了配置，关闭在启动）
 /usr/local/redis/bin/redis-cli -h 127.0.0.1 -p 6379 shutdown
 /usr/local/redis/bin/redis-cli -a 密码 -h 127.0.0.1 -p 6379 shutdown
 
