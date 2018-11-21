@@ -39,4 +39,6 @@ solr集群：
 启动activmq：
 /root/apache-activemq-5.12.0/bin/activemq start
 
+2.拓宝云消防个人版：device增加设备需要推送者用户auId列表接口
+
 

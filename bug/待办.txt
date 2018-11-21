@@ -21,3 +21,4 @@ redisson jedis unexpected exception想办法测试出来并处理
 禅道与钉钉与邮件
 mybatis时间比较，datesub（），condition使用，排序
 测试自定义属性时，spring-boot-configuration-processor是否是必须的
+了解@FeignClient与@Async是否可以同时使用，或者feign有没有异步方式
