@@ -22,3 +22,4 @@ redisson jedis unexpected exception想办法测试出来并处理
 mybatis时间比较，datesub（），condition使用，排序
 测试自定义属性时，spring-boot-configuration-processor是否是必须的
 了解@FeignClient与@Async是否可以同时使用，或者feign有没有异步方式
+了解fastjson接收http date参数是否可以统一配置
