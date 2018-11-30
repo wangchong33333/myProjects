@@ -13,8 +13,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
-	
-	<modules>
+
+    <modules>
         <module>microservice-zipkin-server</module>
         <module>microservice-discovery-eureka</module>
         <module>microservice-discovery-eureka-ha</module>
@@ -73,5 +73,38 @@
             </plugin>
         </plugins>
     </build>
-    
+
+    <repositories>
+        <repository>
+            <id>souche</id>
+            <name>artifactory</name>
+            <url>http://localhost:8081/repository/maven-public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>interval:2</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>souche</id>
+            <name>artifactory</name>
+            <url>http://localhost:8081/repository/maven-public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <!--需要发布的releases库-->
+        <repository>
+            <id>maven-releases</id>
+            <name>maven-releases</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+        <!--需要发布的快照库-->
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>maven-snapshots</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
