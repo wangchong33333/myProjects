@@ -20,4 +20,4 @@ service中抛异常设置code
 mybatis时间比较，datesub（），condition使用，排序
 了解@FeignClient与@Async是否可以同时使用，或者feign有没有异步方式
 了解fastjson接收http date参数是否可以统一配置
-mqtt通配符
+mqtt通配符，了解MqttAsyncClient使用，动态的添加主题
