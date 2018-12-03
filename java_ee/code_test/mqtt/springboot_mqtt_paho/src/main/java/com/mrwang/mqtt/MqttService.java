@@ -3,13 +3,12 @@ package com.mrwang.mqtt;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 @Slf4j
 @Component
-public class MyMqttClient {
+public class MqttService {
 
     private MqttClient client;
     private MqttAsyncClient mqttAsyncClient;
@@ -29,7 +28,7 @@ public class MyMqttClient {
 //        return myMqttClient;
 //
 //    }
-    private MyMqttClient(MqttConfiguration mqttConfiguration) {
+    private MqttService(MqttConfiguration mqttConfiguration) {
         this.mqttConfiguration = mqttConfiguration;
         connect();
     }

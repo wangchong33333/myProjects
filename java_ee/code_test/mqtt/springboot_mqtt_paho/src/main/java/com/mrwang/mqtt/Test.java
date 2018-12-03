@@ -1,14 +1,13 @@
 package com.mrwang.mqtt;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Test {
     @Autowired
-    private MyMqttClient myMqttClient;
+    private MqttService mqttService;
 
     @Autowired
     private MqttConfiguration mqttConfiguration;
@@ -19,6 +18,6 @@ public class Test {
                 .setMobile("119")
                 .setType("2018")
                 .bulid();
-        myMqttClient.publish("/World", pushPayload);
+        mqttService.publish("/World", pushPayload);
     }
 }
