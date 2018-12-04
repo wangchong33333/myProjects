@@ -1,14 +1,3 @@
-#mq配置
-mqtt:
-  host: tcp://193.112.79.100:1883
-  clientid: mqttjs_e8022a4d0b
-  username:
-  password:
-  timeout: 10
-  keepalive: 20
-  #订阅的主题
-  topic: /test
-#logging:
-#  level:
-#    root: debug
-
+spring:
+  profiles:
+    active: test

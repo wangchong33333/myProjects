@@ -1,0 +1,14 @@
+#mq配置
+mqtt:
+  host: tcp://47.96.228.78:1883
+  clientid: ${random.uuid}
+  username:
+  password:
+  timeout: 10
+  keepalive: 20
+  #订阅的主题
+  topic: /tbs/push/dev_msg/department/#
+#logging:
+#  level:
+#    root: debug
+

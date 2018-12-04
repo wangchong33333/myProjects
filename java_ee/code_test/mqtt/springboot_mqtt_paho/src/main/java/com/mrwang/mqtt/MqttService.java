@@ -3,16 +3,14 @@ package com.mrwang.mqtt;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 @Slf4j
 @Component
-public class MyMqttClient {
+public class MqttService {
 
     private MqttClient client;
-    private MqttAsyncClient mqttAsyncClient;
     private MqttConfiguration mqttConfiguration;
 
     //    private static volatile MyMqttClient myMqttClient = null;
@@ -29,7 +27,7 @@ public class MyMqttClient {
 //        return myMqttClient;
 //
 //    }
-    private MyMqttClient(MqttConfiguration mqttConfiguration) {
+    private MqttService(MqttConfiguration mqttConfiguration) {
         this.mqttConfiguration = mqttConfiguration;
         connect();
     }
@@ -98,10 +96,10 @@ public class MyMqttClient {
      * 发布，默认qos为0，非持久化
      *
      * @param topic
-     * @param pushMessage
+     * @param mqttPayload
      */
-    public void publish(String topic, PushPayload pushMessage) {
-        publish(0, false, topic, pushMessage);
+    public void publish(String topic, MqttPayload mqttPayload) {
+        publish(1, false, topic, mqttPayload);
     }
 
     /**
@@ -110,13 +108,13 @@ public class MyMqttClient {
      * @param qos
      * @param retained
      * @param topic
-     * @param pushMessage
+     * @param mqttPayload
      */
-    public void publish(int qos, boolean retained, String topic, PushPayload pushMessage) {
+    public void publish(int qos, boolean retained, String topic, MqttPayload mqttPayload) {
         MqttMessage message = new MqttMessage();
         message.setQos(qos);
         message.setRetained(retained);
-        message.setPayload(pushMessage.toString().getBytes());
+        message.setPayload(mqttPayload.toString().getBytes());
         MqttTopic mTopic = client.getTopic(topic);
         if (null == mTopic) {
             log.error("topic not exist");
@@ -155,12 +153,8 @@ public class MyMqttClient {
         }
     }
 
+    public MqttClient getClient() {
+        return client;
+    }
 
-//    public static void main(String[] args) throws Exception {
-//        String kdTopic = "good";
-//        PushPayload pushMessage = PushPayload.getPushPayloadBuider().setMobile("15345715326")
-//                .setContent("designModel")
-//                .bulid();
-//        MyMqttClient.getInstance().publish(0, false, kdTopic, pushMessage);
-//    }
 }

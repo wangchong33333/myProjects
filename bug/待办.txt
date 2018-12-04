@@ -22,4 +22,6 @@ mybatis时间比较，datesub（），condition使用，排序
 测试自定义属性时，spring-boot-configuration-processor是否是必须的
 了解@FeignClient与@Async是否可以同时使用，或者feign有没有异步方式
 了解fastjson接收http date参数是否可以统一配置
+mqtt通配符，了解MqttAsyncClient使用，动态的添加主题,了解java web创建不被回收对象，了解clientid是否可指定权限
+Caused by: java.lang.IllegalArgumentException: No visible constructors in class com.platform.datastream.center.server.service.impl.MqttService
 https://segmentfault.com/a/1190000013008420  了解本地开发跨域，vue坑
