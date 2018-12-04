@@ -14,10 +14,12 @@
 了解controller对象参数限制问题，了解org.springframework.web.bind.annotation包使用
 分布式事务（调用第三方添加）
 service中抛异常设置code
+redisson jedis unexpected exception想办法测试出来并处理
 了解阿里巴巴开发手册使用场景
 了解github spring boot搜索的项目
 禅道与钉钉与邮件
 mybatis时间比较，datesub（），condition使用，排序
+测试自定义属性时，spring-boot-configuration-processor是否是必须的
 了解@FeignClient与@Async是否可以同时使用，或者feign有没有异步方式
 了解fastjson接收http date参数是否可以统一配置
-mqtt通配符，了解MqttAsyncClient使用，动态的添加主题
+https://segmentfault.com/a/1190000013008420  了解本地开发跨域，vue坑
