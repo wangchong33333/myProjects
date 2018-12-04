@@ -49,6 +49,13 @@
             <optional>true</optional>
         </dependency>
 
+        <!--阿里 FastJson依赖-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.44</version>
+        </dependency>
+
         <!--mqtt-->
         <!--<dependency>-->
             <!--<groupId>org.springframework.boot</groupId>-->

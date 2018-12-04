@@ -9,15 +9,9 @@ public class Test {
     @Autowired
     private MqttService mqttService;
 
-    @Autowired
-    private MqttConfiguration mqttConfiguration;
-
     @GetMapping("")
     public void test() {
-        PushPayload pushPayload = PushPayload.getPushPayloadBuider().setContent("test")
-                .setMobile("119")
-                .setType("2018")
-                .bulid();
-        mqttService.publish("/World", pushPayload);
+
+        mqttService.publish("/World", new MqttPayload().setCode(MqttPayloadCode.DEVICE_SHARED));
     }
 }
