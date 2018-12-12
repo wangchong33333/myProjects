@@ -22,5 +22,5 @@ mybatis时间比较，datesub（），condition使用，排序
 了解fastjson接收http date参数是否可以统一配置
 mqtt通配符，了解MqttAsyncClient使用，动态的添加主题,了解java web创建不被回收对象，了解clientid是否可指定权限
 Caused by: java.lang.IllegalArgumentException: No visible constructors in class com.platform.datastream.center.server.service.impl.MqttService
-测试vue本地代理，以后同一用nginx
 限制上传图片大小
+测试springboot test
