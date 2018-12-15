@@ -25,3 +25,4 @@ Caused by: java.lang.IllegalArgumentException: No visible constructors in class 
 测试vue本地代理，以后同一用nginx
 测试springboot test
 了解element ui动态导航栏实现
+了解vue引用外部文件
