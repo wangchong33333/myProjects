@@ -6,8 +6,8 @@ import HelloWorld1 from '@/components/HelloWorld1'
 Vue.use(Router)
 
 export default new Router({
-  // mode: 'history',
-  // base: '',
+  mode: 'history',
+  base: '/vue', // 只在history下有用
   routes: [
     {
       path: '/',
