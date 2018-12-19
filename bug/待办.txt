@@ -26,4 +26,4 @@ Caused by: java.lang.IllegalArgumentException: No visible constructors in class 
 测试springboot test
 了解element ui动态导航栏实现
 vue定义全局函数、常量，可修改应该是导入的原因
-深入了解promise，对比rx
+深入了解promise，对比rx，可考虑promise封装下小程序原生上传下载，能和flyio契合最好
