@@ -28,3 +28,4 @@ Caused by: java.lang.IllegalArgumentException: No visible constructors in class 
 vue定义全局函数、常量，可修改应该是导入的原因
 深入了解promise，对比rx，可考虑promise封装下小程序原生上传下载，能和flyio契合最好
 详细了解ArrayBuffer
+了解bleUtils能调用globalUtils原因，是否是单例
