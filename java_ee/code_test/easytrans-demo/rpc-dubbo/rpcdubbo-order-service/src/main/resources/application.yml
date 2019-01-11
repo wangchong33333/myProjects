@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: order-service  # the same with com.yiqiniu.easytrans.demos.order.Constant.APPID
+  datasource: # order service datasource config
+    url: jdbc:mysql://localhost:3306/order?characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+server: 
+  port: 8080
+
+easytrans:
+  master:
+    zk:
+      zooKeeperUrl: localhost:2281
+  rpc:
+    dubbo:
+      enabled: true
+      
+  stringcodec:
+    zk:
+      zooKeeperUrl: ${easytrans.master.zk.zooKeeperUrl}
+  idgen:
+    trxId:
+      zkSnow:
+        zooKeeperUrl: ${easytrans.master.zk.zooKeeperUrl}
+  log:
+    database:
+      logCleanEnabled: true
+      logReservedDays: 14
+      logCleanTime: 01:22:00
+      druid:
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/order_translog?characterEncoding=UTF-8&useSSL=false
+        username: root
+        password: 123456
+
+
+# Dubbo Config properties
+# please refer https://dubbo.incubator.apache.org/en-us/docs/user/references/xml/introduction.html
+dubbo:
+  application:
+    name: order-service
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://localhost:2281
+  provider:
+    timeout: 1000
+  consumer:
+    timeout: 1000
+    
+      
