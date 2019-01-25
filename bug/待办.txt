@@ -31,7 +31,7 @@ vue定义全局函数、常量，可修改应该是导入的原因
 了解bleUtils能调用globalUtils原因，是否是单例
 测试emq消费一次主题
 测试正常vue生命周期销毁及数据销毁
-测试前后端websocket，测试超时断开连接，断线重连，nginxtimeout设置有影响（mqtt也是这样），可先用停车的demo
+测试前后端websocket，测试是否有类似mqtt主题消息过滤，acl，测试超时断开连接，断线重连，nginxtimeout设置有影响（mqtt也是这样），可先用停车的demo
 vue异步组件
 vue页面加载异常状态
 了解ssh内网穿透是否适合正式服，或有没有替代方案
