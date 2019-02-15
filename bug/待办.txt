@@ -39,3 +39,4 @@ vue页面加载异常状态
 了解job框架使用
 测试vue表单验证框架
 测试webstorm断点调试
+了解mysql慢查询调优
