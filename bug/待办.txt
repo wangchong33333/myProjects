@@ -39,7 +39,5 @@ vue页面加载异常状态
 了解job框架使用
 测试vue表单验证框架
 测试webstorm断点调试
-vue国际化资源处理
 了解mysql慢查询调优，了解mysql性能优化
-测试element排序和过滤结合后台使用，同时排序和过滤，测试button点击态全局方式
-
+测试element UI是否可使用自定义图片class
