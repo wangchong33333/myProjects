@@ -17,7 +17,7 @@
 		<jsp>2.0</jsp>
 		<mybatis-ehcache>1.0.3</mybatis-ehcache>
 		<mybatis-spring>1.3.1</mybatis-spring>
-		<mybatis>3.4.5</mybatis>
+		<mybatis>3.5.6</mybatis>
 		<mybatis-generator-core>1.3.5</mybatis-generator-core>
 		<log4j>1.2.17</log4j>
 		<jackson>2.9.2</jackson>
