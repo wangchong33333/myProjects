@@ -9,7 +9,7 @@
 	<properties>
 		<junit>4.9</junit>
 		<servlet-api>3.1.0</servlet-api>
-		<org.springframework.version>4.3.0.RELEASE</org.springframework.version>
+		<org.springframework.version>5.2.21.RELEASE</org.springframework.version>
 		<aspectjweaver>1.7.3</aspectjweaver>
 		<mysql-connector>5.1.44</mysql-connector>
 		<c3p0>0.9.1.2</c3p0>
